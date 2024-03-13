@@ -3,7 +3,7 @@ package Solver;
 import java.util.Scanner;
 
 public class Ex62 {
-    public void solve() {
+    public static void solve() {
         Scanner sc = new Scanner(System.in);
         System.out.println("What's your name?");
         String name = sc.nextLine();

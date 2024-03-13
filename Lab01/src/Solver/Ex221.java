@@ -1,7 +1,7 @@
 package Solver;
 
 public class Ex221 {
-    public void solve() {
+    public static void solve() {
         System.out.println("Hello World!");
     }
 }

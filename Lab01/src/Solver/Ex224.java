@@ -3,7 +3,7 @@ package Solver;
 import javax.swing.*;
 
 public class Ex224 {
-    public void solve() {
+    public static void solve() {
         String strN1, strN2;
         String strNoti = "You've just entered: ";
         strN1 = JOptionPane.showInputDialog(null,"Enter 1st number: ", "Enter 1st number", JOptionPane.INFORMATION_MESSAGE);

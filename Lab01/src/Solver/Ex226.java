@@ -3,7 +3,7 @@ package Solver;
 import java.util.Scanner;
 
 public class Ex226 {
-    private void linearEquation(Scanner sc) {
+    private static void linearEquation(Scanner sc) {
         double a, b = 0;
         System.out.print("Enter a = ");
         try {
@@ -30,7 +30,7 @@ public class Ex226 {
             System.out.println("Solution x = " + -b/a);
         }
     }
-    private void linearSystem(Scanner sc) {
+    private static void linearSystem(Scanner sc) {
         //Input cooeficients
         double a11, a12, a21, a22, b1, b2 = 0;
         System.out.print("Enter a11 = ");
@@ -93,7 +93,7 @@ public class Ex226 {
             System.out.printf("Solution (x,y) = (%.2f,%.2f)\n", Dx/D, Dy/D);
         }
     }
-    private void quadraticEquation(Scanner sc) {
+    private static void quadraticEquation(Scanner sc) {
         //Input cooefficients
         double a, b, c = 0;
         System.out.print("Enter a = ");
@@ -131,7 +131,7 @@ public class Ex226 {
             System.out.println("No real solution");
         }
     }
-    public void solve() {
+    public static void solve() {
         Scanner sc = new Scanner(System.in);
         System.out.println("SOLVING TOOL");
         System.out.println("1, Linear Equation.");
