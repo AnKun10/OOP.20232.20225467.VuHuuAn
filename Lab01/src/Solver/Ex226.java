@@ -110,9 +110,9 @@ public class Ex226 {
             System.out.println("Invalid number input.");
             return;
         }
-        System.out.print("Enter b = ");
+        System.out.print("Enter c = ");
         try {
-            b = Double.parseDouble(sc.nextLine());
+            c = Double.parseDouble(sc.nextLine());
         } catch (NumberFormatException e){
             System.out.println("Invalid number input.");
             return;

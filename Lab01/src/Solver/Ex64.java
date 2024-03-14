@@ -63,14 +63,14 @@ public class Ex64 {
                 System.out.println("Invalid input");
                 continue;
             }
-            System.out.println("Enter month (Ex: January, Jan., Jan, 1) = ");
+            System.out.print("Enter month (Ex: January, Jan., Jan, 1) = ");
             int intMonth = convertMonth(sc.nextLine());
             int intDays = calDays(intMonth, isLeapYear(year));
             if (intDays == -1) {
                 System.out.println("Invalid input");
                 continue;
             }
-            System.out.printf("Number of days in %d/%d is %d", intMonth, year, intDays);
+            System.out.printf("Number of days in %d/%d is %d\n", intMonth, year, intDays);
             return;
         }
     }

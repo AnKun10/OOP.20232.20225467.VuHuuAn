@@ -1,11 +1,24 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 //private
+
 import Solver.*;
 
 import java.util.Scanner;
 
 public class Main {
+    private static boolean isExit(Scanner sc) {
+        while (true) {
+            System.out.print("Test another problem? (y/n)");
+            String res = sc.nextLine();
+            switch (res) {
+                default: System.out.println("Invalid input."); continue;
+                case "y": return false;
+                case "n": return true;
+            }
+        }
+    }
+
     private static void showProblems() {
         System.out.println("PROBLEM LIST");
         System.out.println("1, Exercise 2.2.1");
@@ -22,20 +35,22 @@ public class Main {
         System.out.println("12, Exercise 6.6");
         System.out.print("Choose a problem: ");
     }
-    private static int intProblem(Scanner sc){
+
+    private static int intProblem(Scanner sc) {
         int choice = -1;
         try {
             choice = Integer.parseInt(sc.nextLine());
             if (choice > 12 || choice < 1) {
                 throw new ArithmeticException();
             }
-        } catch (ArithmeticException e){
+        } catch (ArithmeticException e) {
             System.out.println("Invalid input.");
             return -1;
         }
         return choice;
     }
-    private static void solveProblem(int problem){
+
+    private static void solveProblem(int problem) {
         switch (problem) {
             default -> System.out.println("Invalid input.");
             case 1 -> Ex221.solve();
@@ -52,9 +67,15 @@ public class Main {
             case 12 -> Ex66.solve();
         }
     }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        showProblems();
-        solveProblem(intProblem(sc));
+        while (true) {
+            Scanner sc = new Scanner(System.in);
+            showProblems();
+            solveProblem(intProblem(sc));
+            if (isExit(sc)) {
+                break;
+            }
+        }
     }
 }

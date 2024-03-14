@@ -42,7 +42,7 @@ public class Ex225 {
                 return;
             }
         }
-        System.out.printf("%.2f %S %.2f = %.2f", n1, op, n2, ans);
+        System.out.printf("%.2f %S %.2f = %.2f\n", n1, op, n2, ans);
     }
 }
 
