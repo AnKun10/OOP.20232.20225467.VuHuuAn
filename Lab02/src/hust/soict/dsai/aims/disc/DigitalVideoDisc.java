@@ -1,3 +1,5 @@
+package hust.soict.dsai.aims.disc;
+
 public class DigitalVideoDisc {
 
     private static int nbDigitalVideoDiscs = 0;
@@ -12,6 +14,10 @@ public class DigitalVideoDisc {
     @Override
     public String toString() {
         return id + " - " + title + " - " + category + " - " + director + " - " + length + " - " + cost;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getTitle() {
