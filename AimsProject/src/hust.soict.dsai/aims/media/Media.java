@@ -1,5 +1,7 @@
 package hust.soict.dsai.aims.media;
 
+import java.util.Objects;
+
 public abstract class Media {
     protected static int nbMedias = 0;
     protected int id;
@@ -50,6 +52,22 @@ public abstract class Media {
     }
 
     public boolean isMatch(String title) {
-        return this.title == title;
+        return Objects.equals(this.title, title);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        //Compare with itself
+        if (o == this) {
+            return true;
+        }
+        //Check if o is an instance of Media class
+        if (!(o instanceof Media)) {
+            return false;
+        }
+        //Cast o to Media
+        Media m = (Media) o;
+        //Compare
+        return Objects.equals(this.title, m.getTitle());
     }
 }
