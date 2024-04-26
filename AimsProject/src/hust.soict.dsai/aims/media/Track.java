@@ -1,6 +1,8 @@
 package hust.soict.dsai.aims.media;
 
-public class Track implements Playable{
+import java.util.Objects;
+
+public class Track implements Playable {
     private String title;
     private int length;
 
@@ -20,6 +22,22 @@ public class Track implements Playable{
     public Track(String title, int length) {
         this.title = title;
         this.length = length;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        //Compare with itself
+        if (o == this) {
+            return true;
+        }
+        //Check if o is an instance of Track class
+        if (!(o instanceof Track)) {
+            return false;
+        }
+        //Cast o to Track
+        Track t = (Track) o;
+        //Compare
+        return (this.length == t.getLength() && Objects.equals(this.title, t.getTitle()));
     }
 
     @Override
