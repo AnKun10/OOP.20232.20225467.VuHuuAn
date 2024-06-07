@@ -4,6 +4,7 @@ import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.MediaComparatorByCostTitle;
 import hust.soict.dsai.aims.media.MediaComparatorByTitleCost;
+import hust.soict.dsai.aims.screen.manager.StoreManagerScreen;
 import hust.soict.dsai.aims.store.Store;
 import hust.soict.dsai.aims.media.Media;
 
@@ -311,7 +312,6 @@ public class Aims {
             }
             user.close();
         }
-
     }
 
     public static void showMenu() {
@@ -389,5 +389,6 @@ public class Aims {
         System.out.println("--------------------------------");
         System.out.println("Please choose a number: 0-1-2");
     }
+
 
 }
