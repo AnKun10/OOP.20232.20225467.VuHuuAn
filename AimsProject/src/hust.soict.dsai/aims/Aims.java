@@ -7,6 +7,7 @@ import hust.soict.dsai.aims.media.MediaComparatorByTitleCost;
 import hust.soict.dsai.aims.screen.manager.StoreManagerScreen;
 import hust.soict.dsai.aims.store.Store;
 import hust.soict.dsai.aims.media.Media;
+import javafx.collections.ObservableList;
 
 import javax.naming.LimitExceededException;
 import java.util.*;
@@ -45,7 +46,7 @@ public class Aims {
                 break program;
             }
 
-            //view store
+            //hust.soict.dsai.aims.screen.customer.view store
             store:
             while (menuOption == 1) {
                 store.displayMedia();
@@ -154,7 +155,7 @@ public class Aims {
                     while (cartOption == 3) {
                         System.out.print("Enter title: ");
                         String title = user.nextLine();
-                        ArrayList<Media> cartTmp = cart.getItemsOrdered();
+                        ObservableList<Media> cartTmp = cart.getItemsOrdered();
                         for (Media m : cartTmp) {
                             if (m.getTitle().equals(title)) {
                                 cart.removeMedia(m);
@@ -283,7 +284,7 @@ public class Aims {
                 while (cartOption == 3) {
                     System.out.print("Enter title: ");
                     String title = user.nextLine();
-                    ArrayList<Media> cartTmp = cart.getItemsOrdered();
+                    ObservableList<Media> cartTmp = cart.getItemsOrdered();
                     for (Media m : cartTmp) {
                         if (m.getTitle().equals(title)) {
                             cart.removeMedia(m);
